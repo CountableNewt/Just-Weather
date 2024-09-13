@@ -20,6 +20,13 @@ class WeatherData: ObservableObject {
     
     @Published var condition: WeatherCondition = .clear
     
+    @Published var conditionSymbol: String = "sun.max"
+    
+    @Published var sunrise: Date?
+    @Published var sunset: Date?
+    
+    @Published var moonPhase: MoonPhase?
+    
     func fetchWeather(for location: CLLocation) async {
         do {
             let weather = try await WeatherService.shared.weather(for: location)
@@ -33,6 +40,13 @@ class WeatherData: ObservableObject {
             self.wind = weather.currentWeather.wind
             
             self.condition = weather.currentWeather.condition
+            
+            self.conditionSymbol = weather.currentWeather.symbolName
+            
+            self.sunrise = weather.dailyForecast[0].sun.sunrise
+            self.sunset = weather.dailyForecast[0].sun.sunset
+            
+            self.moonPhase = weather.dailyForecast[0].moon.phase
             
         } catch {
             print("Error fetching weather: \(error.localizedDescription)")
