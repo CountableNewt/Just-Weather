@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import WeatherKit
+import CoreLocation
 
 @main
 struct Just_WeatherApp: App {
+    @StateObject private var locationManager = LocationManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Just_WeatherView()
+                .environmentObject(locationManager)
+                .onAppear {
+                    locationManager.startUpdatingLocation()
+                }
+                .onDisappear {
+                    locationManager.stopUpdatingLocation()
+                }
         }
     }
 }
