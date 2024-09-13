@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "just-weather-any-icon-thermometer.png",
+      "filename" : "just-weather-any-icon.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -13,7 +13,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "just-weather-dark-icon-thermometer.png",
+      "filename" : "just-weather-dark-icon.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -25,7 +25,7 @@
           "value" : "tinted"
         }
       ],
-      "filename" : "just-weather-dark-icon-thermometer 1.png",
+      "filename" : "just-weather-dark-icon 1.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
