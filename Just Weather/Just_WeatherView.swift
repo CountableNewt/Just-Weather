@@ -134,6 +134,10 @@ struct Just_WeatherView: View {
         .onChange(of: locationManager.locationStatus) { _ in
             fetchWeatherIfLocationAvailable()
         }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+            print("Did Become Active")
+            fetchWeatherIfLocationAvailable()
+        }
     }
     
     private func fetchWeatherIfLocationAvailable() {
