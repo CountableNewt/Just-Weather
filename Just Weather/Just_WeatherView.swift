@@ -14,6 +14,8 @@ struct Just_WeatherView: View {
     @StateObject private var weatherData = WeatherData()
     @State private var isLoading = true
     
+    let formatter = MeasurementFormatter()
+    
     var body: some View {
         VStack {
             if isLoading {
@@ -25,13 +27,8 @@ struct Just_WeatherView: View {
                     Spacer()
                     Spacer()
                     VStack {
-                        if Locale.current.measurementSystem != .metric {
-                            Text("\(toFahrenheit(weatherData.temperature.value), specifier: "%.0f")º")
-                                .font(.custom("SF-Pro-Text-Medium", fixedSize: 175))
-                        } else {
-                            Text("\(weatherData.temperature.value, specifier: "%.0f")º")
-                                .font(.custom("SF-Pro-Text-Medium", fixedSize: 175))
-                        }
+                        Text("\(formatter.string(from: weatherData.temperature).prefix(2))º")
+                            .font(.custom("SF-Pro-Text-Medium", fixedSize: 175))
                         Text("Feels Like")
                     }
                     Spacer()
@@ -52,11 +49,7 @@ struct Just_WeatherView: View {
                             HStack {
                                 // Text("Actual:")
                                 Spacer()
-                                if Locale.current.measurementSystem != .metric {
-                                    Text("\(toFahrenheit(weatherData.temperature.value), specifier: "%.0f")º")
-                                } else {
-                                    Text("\(weatherData.temperature.value, specifier: "%.0f")º")
-                                }
+                                Text("\(formatter.string(from: weatherData.temperature).prefix(2))º")
                             }
                             HStack {
                                 // Text("Humidity:")
@@ -84,7 +77,7 @@ struct Just_WeatherView: View {
                                 // Text("Wind:")
                                 Spacer()
                                 if let wind = weatherData.wind {
-                                    if Locale.current.measurementSystem != .metric {
+                                    if Locale.current.measurementSystem == .us {
                                         Text("\(toMilesPerHour(wind.speed.value), specifier: "%.0f")mph \(cardinalDirection(from: wind.direction.value))")
                                     } else {
                                         Text("\(wind.speed.value, specifier: "%.0f")km/h \(cardinalDirection(from: wind.direction.value))")
@@ -96,11 +89,7 @@ struct Just_WeatherView: View {
                             HStack {
                                 // Text("Dew Point:")
                                 Spacer()
-                                if Locale.current.measurementSystem != .metric {
-                                    Text("\(toFahrenheit(weatherData.dewPoint.value), specifier: "%.0f")º")
-                                } else {
-                                    Text("\(weatherData.dewPoint.value, specifier: "%.0f")º")
-                                }
+                                Text("\(formatter.string(from: weatherData.dewPoint).prefix(2))º")
                             }
                             HStack {
                                 // Text("Sunset:")
@@ -135,7 +124,6 @@ struct Just_WeatherView: View {
             fetchWeatherIfLocationAvailable()
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
-            print("Did Become Active")
             fetchWeatherIfLocationAvailable()
         }
     }
