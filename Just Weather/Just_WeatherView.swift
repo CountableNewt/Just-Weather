@@ -28,7 +28,7 @@ struct Just_WeatherView: View {
                     Spacer()
                     VStack {
                         Text("\(formatter.string(from: weatherData.temperature).prefix(2))º")
-                            .font(.custom("SF-Pro-Text-Medium", fixedSize: 175))
+                            .font(.custom("SF-Pro-Display-Regular", fixedSize: 175))
                         Text("Feels Like")
                     }
                     Spacer()
@@ -39,6 +39,10 @@ struct Just_WeatherView: View {
                         Text("\(weatherData.condition)")
                     }
                     Spacer()
+                    HStack {
+                        Text("H: \(formatter.string(from: weatherData.highTemp).prefix(weatherData.highTemp.value >= 100 ? 3 : 2))º")
+                        Text("L: \(formatter.string(from: weatherData.lowTemp).prefix(2))º")
+                    }
                     HStack {
                         VStack {
                             Image(systemName: "thermometer.medium")

@@ -27,6 +27,9 @@ class WeatherData: ObservableObject {
     
     @Published var moonPhase: MoonPhase?
     
+    @Published var highTemp: Measurement<UnitTemperature> = Measurement(value: 0, unit: .fahrenheit)
+    @Published var lowTemp: Measurement<UnitTemperature> = Measurement(value: 0, unit: .fahrenheit)
+    
     func fetchWeather(for location: CLLocation) async {
         do {
             let weather = try await WeatherService.shared.weather(for: location)
@@ -47,6 +50,9 @@ class WeatherData: ObservableObject {
             self.sunset = weather.dailyForecast[0].sun.sunset
             
             self.moonPhase = weather.dailyForecast[0].moon.phase
+            
+            self.highTemp = weather.dailyForecast[0].highTemperature
+            self.lowTemp = weather.dailyForecast[0].lowTemperature
             
         } catch {
             print("Error fetching weather: \(error.localizedDescription)")
