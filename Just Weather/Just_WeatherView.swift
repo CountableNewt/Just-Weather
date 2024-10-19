@@ -27,7 +27,7 @@ struct Just_WeatherView: View {
                     Spacer()
                     Spacer()
                     VStack {
-                        Text("\(formatter.string(from: weatherData.temperature).prefix(2))º")
+                        Text("\(formatter.string(from: weatherData.apparentTemperature).prefix(2))º")
                             .font(.custom("SF-Pro-Display-Regular", fixedSize: 175))
                         Text("Feels Like")
                     }
