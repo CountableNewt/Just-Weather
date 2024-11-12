@@ -22,29 +22,29 @@ struct WatchView: View {
                 Text("Fetching Weather Data...")
                     .font(.headline)
             } else if weatherData.wind != nil {
-                Text("Weather Data Goes Here")
+                
             } else {
                 Text("No Weather Data Available")
                     .font(.headline)
             }
         }
         .onAppear {
-            // fetchWeatherIfLocationAvailable()
+            fetchWeatherIfLocationAvailable()
         }
         // .onChange(of: locationManager.locationStatus, perform: fetchWeatherIfLocationAvailable)
     }
     
-//    private func fetchWeatherIfLocationAvailable() {
-//        Task {
-//            if let lastLocation = $locationManager.lastLocation {
-//                await weatherData.fetchWeather(for: lastLocation)
-//                isLoading = false
-//            } else {
-//                print("No Location Found")
-//                isLoading = false
-//            }
-//        }
-//    }
+    private func fetchWeatherIfLocationAvailable() {
+        Task {
+            if let lastLocation = locationManager.lastKnownLocation {
+                await weatherData.fetchWeather(for: lastLocation)
+                isLoading = false
+            } else {
+                print("No Location Found")
+                isLoading = false
+            }
+        }
+    }
 }
 
 #Preview {

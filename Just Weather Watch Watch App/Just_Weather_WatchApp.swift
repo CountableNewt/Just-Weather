@@ -19,6 +19,10 @@ struct Just_Weather_Watch_Watch_AppApp: App {
                 .environmentObject(locationManager)
                 .onAppear {
                     locationManager.requestLocationPermission()
+                    locationManager.startUpdatingLocation()
+                }
+                .onDisappear {
+                    locationManager.stopUpdatingLocation()
                 }
         }
     }
