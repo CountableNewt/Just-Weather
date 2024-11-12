@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22C89DDC2CDC2574003E01E8 /* Just Weather Watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 22C89DB92CDC2572003E01E8 /* Just Weather Watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		22CEF4B82C969B80001E83AD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CEF4B72C969B80001E83AD /* WidgetKit.framework */; };
 		22CEF4BA2C969B80001E83AD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CEF4B92C969B80001E83AD /* SwiftUI.framework */; };
 		22CEF4C92C969B82001E83AD /* Just Weather Open ControlExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 22CEF4B52C969B80001E83AD /* Just Weather Open ControlExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -27,6 +28,27 @@
 			remoteGlobalIDString = 222F21BF2C76B206003D0F1E;
 			remoteInfo = "Just Weather";
 		};
+		22C89DC92CDC2574003E01E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 222F21B82C76B206003D0F1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22C89DB82CDC2572003E01E8;
+			remoteInfo = "Just Weather Watch Watch App";
+		};
+		22C89DD32CDC2574003E01E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 222F21B82C76B206003D0F1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22C89DB82CDC2572003E01E8;
+			remoteInfo = "Just Weather Watch Watch App";
+		};
+		22C89DDA2CDC2574003E01E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 222F21B82C76B206003D0F1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22C89DB82CDC2572003E01E8;
+			remoteInfo = "Just Weather Watch Watch App";
+		};
 		22CEF4C72C969B82001E83AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 222F21B82C76B206003D0F1E /* Project object */;
@@ -37,6 +59,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		22C89DDD2CDC2574003E01E8 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				22C89DDC2CDC2574003E01E8 /* Just Weather Watch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22CEF4A92C968551001E83AD /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,6 +87,9 @@
 		222F21C02C76B206003D0F1E /* Just Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Just Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		222F21D02C76B207003D0F1E /* Just WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Just WeatherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		222F21DA2C76B207003D0F1E /* Just WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Just WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C89DB92CDC2572003E01E8 /* Just Weather Watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Just Weather Watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C89DC82CDC2574003E01E8 /* Just Weather Watch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Just Weather Watch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C89DD22CDC2574003E01E8 /* Just Weather Watch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Just Weather Watch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CEF4B52C969B80001E83AD /* Just Weather Open ControlExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Just Weather Open ControlExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CEF4B72C969B80001E83AD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		22CEF4B92C969B80001E83AD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -67,6 +103,13 @@
 			);
 			target = 222F21BF2C76B206003D0F1E /* Just Weather */;
 		};
+		22CB9E502CE3E9E100404E04 /* Exceptions for "Just Weather" folder in "Just Weather Watch Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/WeatherData.swift,
+			);
+			target = 22C89DB82CDC2572003E01E8 /* Just Weather Watch Watch App */;
+		};
 		22CEF4CA2C969B82001E83AD /* Exceptions for "Just Weather Open Control" folder in "Just Weather Open ControlExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -79,6 +122,9 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		222F21C22C76B206003D0F1E /* Just Weather */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				22CB9E502CE3E9E100404E04 /* Exceptions for "Just Weather" folder in "Just Weather Watch Watch App" target */,
+			);
 			path = "Just Weather";
 			sourceTree = "<group>";
 		};
@@ -90,6 +136,21 @@
 		222F21DD2C76B207003D0F1E /* Just WeatherUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Just WeatherUITests";
+			sourceTree = "<group>";
+		};
+		22C89DBA2CDC2572003E01E8 /* Just Weather Watch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Just Weather Watch Watch App";
+			sourceTree = "<group>";
+		};
+		22C89DCB2CDC2574003E01E8 /* Just Weather Watch Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Just Weather Watch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		22C89DD52CDC2574003E01E8 /* Just Weather Watch Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Just Weather Watch Watch AppUITests";
 			sourceTree = "<group>";
 		};
 		22CEF4BB2C969B80001E83AD /* Just Weather Open Control */ = {
@@ -125,6 +186,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22C89DB62CDC2572003E01E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C89DC52CDC2574003E01E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C89DCF2CDC2574003E01E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22CEF4B22C969B80001E83AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,6 +226,9 @@
 				222F21D32C76B207003D0F1E /* Just WeatherTests */,
 				222F21DD2C76B207003D0F1E /* Just WeatherUITests */,
 				22CEF4BB2C969B80001E83AD /* Just Weather Open Control */,
+				22C89DBA2CDC2572003E01E8 /* Just Weather Watch Watch App */,
+				22C89DCB2CDC2574003E01E8 /* Just Weather Watch Watch AppTests */,
+				22C89DD52CDC2574003E01E8 /* Just Weather Watch Watch AppUITests */,
 				22CEF4B62C969B80001E83AD /* Frameworks */,
 				222F21C12C76B206003D0F1E /* Products */,
 			);
@@ -156,6 +241,9 @@
 				222F21D02C76B207003D0F1E /* Just WeatherTests.xctest */,
 				222F21DA2C76B207003D0F1E /* Just WeatherUITests.xctest */,
 				22CEF4B52C969B80001E83AD /* Just Weather Open ControlExtension.appex */,
+				22C89DB92CDC2572003E01E8 /* Just Weather Watch Watch App.app */,
+				22C89DC82CDC2574003E01E8 /* Just Weather Watch Watch AppTests.xctest */,
+				22C89DD22CDC2574003E01E8 /* Just Weather Watch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,11 +268,13 @@
 				222F21BD2C76B206003D0F1E /* Frameworks */,
 				222F21BE2C76B206003D0F1E /* Resources */,
 				22CEF4A92C968551001E83AD /* Embed Foundation Extensions */,
+				22C89DDD2CDC2574003E01E8 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				22CEF4C82C969B82001E83AD /* PBXTargetDependency */,
+				22C89DDB2CDC2574003E01E8 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				222F21C22C76B206003D0F1E /* Just Weather */,
@@ -242,6 +332,74 @@
 			productReference = 222F21DA2C76B207003D0F1E /* Just WeatherUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		22C89DB82CDC2572003E01E8 /* Just Weather Watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C89DE42CDC2574003E01E8 /* Build configuration list for PBXNativeTarget "Just Weather Watch Watch App" */;
+			buildPhases = (
+				22C89DB52CDC2572003E01E8 /* Sources */,
+				22C89DB62CDC2572003E01E8 /* Frameworks */,
+				22C89DB72CDC2572003E01E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				22C89DBA2CDC2572003E01E8 /* Just Weather Watch Watch App */,
+			);
+			name = "Just Weather Watch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Just Weather Watch Watch App";
+			productReference = 22C89DB92CDC2572003E01E8 /* Just Weather Watch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22C89DC72CDC2574003E01E8 /* Just Weather Watch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C89DE52CDC2574003E01E8 /* Build configuration list for PBXNativeTarget "Just Weather Watch Watch AppTests" */;
+			buildPhases = (
+				22C89DC42CDC2574003E01E8 /* Sources */,
+				22C89DC52CDC2574003E01E8 /* Frameworks */,
+				22C89DC62CDC2574003E01E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22C89DCA2CDC2574003E01E8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				22C89DCB2CDC2574003E01E8 /* Just Weather Watch Watch AppTests */,
+			);
+			name = "Just Weather Watch Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "Just Weather Watch Watch AppTests";
+			productReference = 22C89DC82CDC2574003E01E8 /* Just Weather Watch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22C89DD12CDC2574003E01E8 /* Just Weather Watch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C89DE62CDC2574003E01E8 /* Build configuration list for PBXNativeTarget "Just Weather Watch Watch AppUITests" */;
+			buildPhases = (
+				22C89DCE2CDC2574003E01E8 /* Sources */,
+				22C89DCF2CDC2574003E01E8 /* Frameworks */,
+				22C89DD02CDC2574003E01E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22C89DD42CDC2574003E01E8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				22C89DD52CDC2574003E01E8 /* Just Weather Watch Watch AppUITests */,
+			);
+			name = "Just Weather Watch Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "Just Weather Watch Watch AppUITests";
+			productReference = 22C89DD22CDC2574003E01E8 /* Just Weather Watch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		22CEF4B42C969B80001E83AD /* Just Weather Open ControlExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22CEF4CB2C969B82001E83AD /* Build configuration list for PBXNativeTarget "Just Weather Open ControlExtension" */;
@@ -271,7 +429,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1610;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					222F21BF2C76B206003D0F1E = {
@@ -284,6 +442,17 @@
 					222F21D92C76B207003D0F1E = {
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = 222F21BF2C76B206003D0F1E;
+					};
+					22C89DB82CDC2572003E01E8 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					22C89DC72CDC2574003E01E8 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 22C89DB82CDC2572003E01E8;
+					};
+					22C89DD12CDC2574003E01E8 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 22C89DB82CDC2572003E01E8;
 					};
 					22CEF4B42C969B80001E83AD = {
 						CreatedOnToolsVersion = 16.1;
@@ -308,6 +477,9 @@
 				222F21CF2C76B207003D0F1E /* Just WeatherTests */,
 				222F21D92C76B207003D0F1E /* Just WeatherUITests */,
 				22CEF4B42C969B80001E83AD /* Just Weather Open ControlExtension */,
+				22C89DB82CDC2572003E01E8 /* Just Weather Watch Watch App */,
+				22C89DC72CDC2574003E01E8 /* Just Weather Watch Watch AppTests */,
+				22C89DD12CDC2574003E01E8 /* Just Weather Watch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -328,6 +500,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		222F21D82C76B207003D0F1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C89DB72CDC2572003E01E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C89DC62CDC2574003E01E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C89DD02CDC2574003E01E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -365,6 +558,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22C89DB52CDC2572003E01E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C89DC42CDC2574003E01E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C89DCE2CDC2574003E01E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22CEF4B12C969B80001E83AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,6 +598,21 @@
 			isa = PBXTargetDependency;
 			target = 222F21BF2C76B206003D0F1E /* Just Weather */;
 			targetProxy = 222F21DB2C76B207003D0F1E /* PBXContainerItemProxy */;
+		};
+		22C89DCA2CDC2574003E01E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22C89DB82CDC2572003E01E8 /* Just Weather Watch Watch App */;
+			targetProxy = 22C89DC92CDC2574003E01E8 /* PBXContainerItemProxy */;
+		};
+		22C89DD42CDC2574003E01E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22C89DB82CDC2572003E01E8 /* Just Weather Watch Watch App */;
+			targetProxy = 22C89DD32CDC2574003E01E8 /* PBXContainerItemProxy */;
+		};
+		22C89DDB2CDC2574003E01E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22C89DB82CDC2572003E01E8 /* Just Weather Watch Watch App */;
+			targetProxy = 22C89DDA2CDC2574003E01E8 /* PBXContainerItemProxy */;
 		};
 		22CEF4C82C969B82001E83AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -519,7 +748,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Just Weather/Just Weather.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"Just Weather/Preview Content\"";
 				DEVELOPMENT_TEAM = G39TU2R26A;
 				ENABLE_PREVIEWS = YES;
@@ -559,7 +788,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Just Weather/Just Weather.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"Just Weather/Preview Content\"";
 				DEVELOPMENT_TEAM = G39TU2R26A;
 				ENABLE_PREVIEWS = YES;
@@ -664,13 +893,155 @@
 			};
 			name = Release;
 		};
+		22C89DDE2CDC2574003E01E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Just Weather Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = G39TU2R26A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Just. Weather.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Just. Weather. needs to know your location in order to provide relevant weather data";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.sam-clemente.just-weather-app";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sam-clemente.just-weather-app.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		22C89DDF2CDC2574003E01E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Just Weather Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = G39TU2R26A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Just. Weather.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Just. Weather. needs to know your location in order to provide relevant weather data";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.sam-clemente.just-weather-app";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sam-clemente.just-weather-app.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		22C89DE02CDC2574003E01E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G39TU2R26A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sam-clemente.Just-Weather-Watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Just Weather Watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Just Weather Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		22C89DE12CDC2574003E01E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G39TU2R26A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sam-clemente.Just-Weather-Watch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Just Weather Watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Just Weather Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		22C89DE22CDC2574003E01E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G39TU2R26A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sam-clemente.Just-Weather-Watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Just Weather Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		22C89DE32CDC2574003E01E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G39TU2R26A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sam-clemente.Just-Weather-Watch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Just Weather Watch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
 		22CEF4CC2C969B82001E83AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = G39TU2R26A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Just Weather Open Control/Info.plist";
@@ -702,7 +1073,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = G39TU2R26A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Just Weather Open Control/Info.plist";
@@ -763,6 +1134,33 @@
 			buildConfigurations = (
 				222F21EB2C76B207003D0F1E /* Debug */,
 				222F21EC2C76B207003D0F1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22C89DE42CDC2574003E01E8 /* Build configuration list for PBXNativeTarget "Just Weather Watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C89DDE2CDC2574003E01E8 /* Debug */,
+				22C89DDF2CDC2574003E01E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22C89DE52CDC2574003E01E8 /* Build configuration list for PBXNativeTarget "Just Weather Watch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C89DE02CDC2574003E01E8 /* Debug */,
+				22C89DE12CDC2574003E01E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22C89DE62CDC2574003E01E8 /* Build configuration list for PBXNativeTarget "Just Weather Watch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C89DE22CDC2574003E01E8 /* Debug */,
+				22C89DE32CDC2574003E01E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
