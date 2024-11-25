@@ -27,8 +27,24 @@ struct Just_WeatherView: View {
                     Spacer()
                     Spacer()
                     VStack {
-                        Text("\(formatter.string(from: weatherData.apparentTemperature).prefix(2))º")
-                            .font(.custom("SF-Pro-Display-Regular", fixedSize: 175))
+                        if Locale.current.measurementSystem == .us {
+                            Text("\(toFahrenheit(weatherData.apparentTemperature.value), specifier: "%.0f")º")
+                                .font(.custom("SF-Pro-Display-Regular", fixedSize: 150))
+                        } else {
+                            let feelsLike = (weatherData.apparentTemperature.value * 2).rounded() / 2
+                            
+                            // If the temperature's value is a single-digit number, show the decimal (if it's not N.0)
+                            if feelsLike < 10 && feelsLike > -10 && feelsLike != floor(feelsLike) {
+                                Text("\(feelsLike, specifier: "%.1f")º")
+                                    .font(.custom("SF-Pro-Display-Regular", fixedSize: 150))
+                            } else {
+                                Text("\(feelsLike, specifier: "%.0f")º")
+                                    .font(.custom("SF-Pro-Display-Regular", fixedSize: 150))
+                            }
+                            
+                        }
+//                        Text("\(formatter.string(from: weatherData.apparentTemperature).prefix(2))º")
+//                            .font(.custom("SF-Pro-Display-Regular", fixedSize: 175))
                         Text("Feels Like")
                     }
                     Spacer()
@@ -40,8 +56,14 @@ struct Just_WeatherView: View {
                     }
                     Spacer()
                     HStack {
-                        Text("H: \(formatter.string(from: weatherData.highTemp).prefix(weatherData.highTemp.value >= 100 ? 3 : 2))º")
-                        Text("L: \(formatter.string(from: weatherData.lowTemp).prefix(2))º")
+                        var highTemp: Double {
+                            return Locale.current.measurementSystem == .us ? toFahrenheit(weatherData.highTemp.value) : weatherData.highTemp.value
+                        }
+                        var lowTemp: Double {
+                            return Locale.current.measurementSystem == .us ? toFahrenheit(weatherData.lowTemp.value) : weatherData.lowTemp.value
+                        }
+                        Text("H: \(highTemp, specifier: "%.0f")º")
+                        Text("L: \(lowTemp, specifier: "%.0f")º")
                     }
                     HStack {
                         VStack {
@@ -53,7 +75,10 @@ struct Just_WeatherView: View {
                             HStack {
                                 // Text("Actual:")
                                 Spacer()
-                                Text("\(formatter.string(from: weatherData.temperature).prefix(2))º")
+                                var actualTemp: Double {
+                                    return Locale.current.measurementSystem == .us ? toFahrenheit(weatherData.temperature.value) : weatherData.temperature.value
+                                }
+                                Text("\(actualTemp, specifier: "%.0f")º")
                             }
                             HStack {
                                 // Text("Humidity:")
@@ -93,7 +118,10 @@ struct Just_WeatherView: View {
                             HStack {
                                 // Text("Dew Point:")
                                 Spacer()
-                                Text("\(formatter.string(from: weatherData.dewPoint).prefix(2))º")
+                                var dewPoint: Double {
+                                    return Locale.current.measurementSystem == .us ? toFahrenheit(weatherData.dewPoint.value) : weatherData.dewPoint.value
+                                }
+                                Text("\(dewPoint, specifier: "%.0f")º")
                             }
                             HStack {
                                 // Text("Sunset:")
